@@ -12,4 +12,4 @@ def picToSketch(image):
     sketch= cv2.divide(grey_img, invertedBlur, scale= 256.0)
 
     cv2.imwrite("sketch.png", sketch)
-picToSketch(image=  cv2.imread("D:\Pruebas Python\img\_fotoEdilberto.jpg"))
+picToSketch(image=  cv2.imread("Pruebas_Python\Mini Proyectos Python JK\image to cartoon\JKfotoTIC.jpg"))
