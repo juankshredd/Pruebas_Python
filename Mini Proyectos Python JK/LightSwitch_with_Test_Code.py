@@ -22,6 +22,7 @@ class LightSwitch():
 
 # Se crea un objeto de la clase
 oLightSwitch = LightSwitch()
+oLightSwitch1 = LightSwitch()
 
 # Se llaman sus metodos
 oLightSwitch.show()
@@ -29,3 +30,7 @@ oLightSwitch.turnOn()
 oLightSwitch.show()
 oLightSwitch.turnOff()
 oLightSwitch.show()
+print('============================')
+oLightSwitch1.show()
+oLightSwitch1.turnOn()
+oLightSwitch1.show()

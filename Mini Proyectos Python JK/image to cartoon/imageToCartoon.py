@@ -3,7 +3,7 @@ import cv2
 import numpy as np
 
 #reading image debe tener la ruta a la foto en la pc
-img = cv2.imread("Pruebas_Python\Mini Proyectos Python JK\image to cartoon\_fotoEdilberto.jpg")
+img = cv2.imread("Pruebas_Python\Mini Proyectos Python JK\image to cartoon\JKfotoTIC.jpg")
 
 # edges
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
