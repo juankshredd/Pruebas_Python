@@ -14,7 +14,7 @@ class TV():
         self.volume = 0             #self.VOLUME_MAXIMUM // # Integer divide *** EN ESTA LINEA FALTA ALGO EN EL LIBRO PARA ESTA DIVISION A ENTERO ***
     
     def power(self):
-        self.isOn = not self.isOn # toggle
+        self.isOn = not self.isOn # toggle. This makes switching value easier
 
     def volumeUp(self):
         if not self.isOn:
