@@ -1,30 +1,32 @@
-# Higher or Lower
+# Taller 4 
+# SENA estructuras de datos en python 2022
+# Juan Carlos Bohorquez
 import random
 
 # card constants
-SUIT_TUPLE = ('Spades', 'Hearts', 'Clubs', 'Diamonds')
-RANK_TUPLE = ('Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King')
+SUIT_TUPLE = ('Picas', 'Corazones', 'Treboles', 'Diamantes')
+RANK_TUPLE = ('As', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King')
 N_CARDS = 8
 
-# pass in the deck and this function returns a random card from the deck
+
 def getCard(deckListIn):
-    thisCard = deckListIn.pop() # pop one off the top of the deck and return
+    thisCard = deckListIn.pop() 
     return thisCard
 
-# pass in the deck and this function returns a shuffled copy of the deck
+
 def shuffle(deckListIn):
-    deckListOut = deckListIn.copy() # make a copy of the starting deck
+    deckListOut = deckListIn.copy() 
     random.shuffle(deckListOut)
     return deckListOut
     
 # Main code
 print('****************************************************************')
-print('                Welcome to Higher and Lower.')
+print('   Bienvenido a Adivina si la carta es mayor o menor.')
 print('****************************************************************')
-print('You have to choose whether the next card to be shown will be higher \nor lower than the current card.')
+print('Debes escoger si la siguiente carta es mayor \no es menor que la carta actual.')
 print('****************************************************************')
-print('Getting it right adds 20 points; get it wrong and you lose 15 points.')
-print('You have 50 points to start. \n')
+print('Si aciertas te llevas 20 puntos; si fallas pierdes 15 puntos.')
+print('Tienes 50 puntos para empezar. \n')
 print('****************************************************************')
 
 startingDeckList = []
@@ -42,39 +44,39 @@ while True: # play multiple games
     currentCardRank = currentCardDict['rank']
     currentCardValue = currentCardDict['value']
     currentCardSuit = currentCardDict['suit']
-    print('Starting card is: ', currentCardRank + ' of ' + currentCardSuit)
+    print('La carta inicial es: ', currentCardRank + ' de ' + currentCardSuit)
     print()
 
     for cardNumber in range(0, N_CARDS):
-        answer = input('Will the next card be higher or lower than the ' + currentCardRank + ' of ' + currentCardSuit + '? (enter h or l):')
+        answer = input('Sera la siguiente carta mayor o menor que el ' + currentCardRank + ' de ' + currentCardSuit + '? (responde h para mayor o l para menor):')
         answer = answer.casefold() # force lowercase
 
         nextCardDict = getCard(gameDeckList)
         nextCardRank = nextCardDict['rank']
         nextCardSuit = nextCardDict['suit']
         nextCardValue = nextCardDict['value']
-        print('Next card is: ', nextCardRank + ' of ' + nextCardSuit)
+        print('La siguiente carta es: ', nextCardRank + ' de ' + nextCardSuit)
 
         if answer == 'h':
             if nextCardValue > currentCardValue:
-                print('You got it right, it was higher.')
+                print('Correcto!! , la carta era mayor!!!.')
                 score = score + 20
             else:
-                print('Sorry, it was not higher')
+                print('Lo siento, la carta era mayor')
                 score = score -15
         elif answer == 'l':
             if nextCardValue < currentCardValue:
                 score = score + 20
-                print('You got it right, it was lower')
+                print('Correcto!!!, la carta era menor!!!')
             else:
                 score = score -15
-                print('Sorry, it was not lower')
+                print('Lo siento, la carta era menor')
 
-        print('Your score is: ', score)
+        print('Tu puntaje es: ', score)
         print()
         currentCardRank = nextCardRank
         currentCardValue = nextCardValue
-    goAgain = input('To play again, press ENTER, or "q" to quit: ')
+    goAgain = input('Para jugar de nuevo, presiona ENTER, o "q" para salir del juego: ')
     if goAgain == 'q':
         break
-    print('OK Bye')
+    print('OK Adios!!!')

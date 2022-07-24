@@ -10,7 +10,7 @@ for i in range(0,6):
         n= random.randint(1,42)
         randomlist.append(n)
 print(randomlist)
- # check if i is unique and has a value from 1 to 42
+# check if i is unique and has a value from 1 to 42
 print ("\nMega Lotto 6/45:\n")
 import random
 randomlist = []
@@ -18,7 +18,7 @@ for i in range(0,6):
     n= random.randint(1,45)
     randomlist.append(n)
 print(randomlist)
- # check if it is unique and has a value from 1 to 45
+# check if it is unique and has a value from 1 to 45
 print ("\nSuper Lotto 6/49:")
 import random
 randomlist = []
@@ -26,7 +26,7 @@ for i in range(0,6):
     n= random.randint(1,49)
     randomlist.append(n)
 print(randomlist)
- # check if its unique and has a value from 1 to 49
+# check if its unique and has a value from 1 to 49
 print ("\nGrand Lotto 6/55:")
 import random
 randomlist = []
@@ -34,7 +34,7 @@ for i in range(0,6):
     n= random.randint(1,55)
     randomlist.append(n)
 print(randomlist)
- # check if its unique and has a value from 1 to 55
+# check if its unique and has a value from 1 to 55
 print ("\nUltra Lotto 6/58:")
 import random
 randomlist = []
@@ -42,7 +42,7 @@ for i in range(0,6):
     n= random.randint(1,58)
     randomlist.append(n)
 print(randomlist)
- # check if its unique and has a value from 1 to 58
+# check if its unique and has a value from 1 to 58
 print("--------------------------------------")
 print("\nDo you want to generate new set of Lucky Picked Numbers?\n")
 print ('-Enter "yes" to generate new set of Lucky Picked Numbers')

@@ -1,3 +1,6 @@
+# Taller 3 Condidionales simples
+# SENA estructuras de datos en Python 2022
+
 def imc():
 	x = int(input("ingrese su peso en kilos: "))
 	y = float(input("ingrese su altura en metros: "))
